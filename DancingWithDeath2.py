@@ -6,11 +6,11 @@ from asyncio import sleep
 def register(cb):
     cb(DancingwithdeathMod())
 class DancingwithdeathMod(loader.Module):
-    strings = {'name': 'Dancing with death'}
+    strings = {'name': 'Dancing with death (scatz krutoy)'}
 
     async def deadplaycmd(self, die):
         args = utils.get_args_raw(die)
-        if args == "rules":
+        if args == "правила":
             await die.edit("Правила просты \n\n>есть рулетка которая рандомит число от 1 до 6 \n\n>есть твое число которое тоже находится в диапазоне от 1 до 6\n\n>при условии если эти числа совпадают - ты умираешь(теряешь аккаунт)\n\n>в любых остальных случаях ты остаешься в живых\n\n\n->как заполнять анкету дьявола - <b>.deadplay <число от 1 до 6></b> пример - .deadplay 5")
             return
         if int(args) > 0 and int(args) < 7:
